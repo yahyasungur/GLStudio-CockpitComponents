@@ -1,0 +1,631 @@
+GL_Studio_Version: 7.0.0
+DocumentPreferences: 
+{
+  SettingPaletteFile: (None)
+}
+
+DisplayFrame: EditorDisplayFrame
+{
+  Width: 759
+  Height: 759
+  Title: GLStudio-Adi
+  InitialX: 0
+  InitialY: 0
+  MaxWidth: -1
+  MaxHeight: -1
+  MinWidth: -1
+  MinHeight: -1
+  Resizable: 0
+  HasBorder: 1
+  MainFileName: 
+  DerivedClass: GLStudio_AdiClass
+  StandaloneHeaderFile: GLStudio_AdiApp.h
+  StandaloneSourceFile: GLStudio_AdiApp.cpp
+  StandaloneClassInstance: gLStudio_Adi
+  ComponentSourceFile: GLStudio_Adi.cpp
+  ComponentHeaderFile: GLStudio_Adi.h
+  ComponentUserBaseClass: 0
+  ClassDerivedFrom: 
+  ClassDerivedFromInit: 
+  RootName: GLStudio-Adi
+  FillInFromRoot: 1
+  GeneratedSourcePath: 
+  MetaIdlFileUserCode: 
+  MetaIdlDeclarationUserCode: 
+  ExtraCodeSource: 
+  ExtraCodeHeader: #include\s"glsutil.h"
+  MainLoopSource: 
+  MainInitSource: 
+  ClassCodeSource: #$STRING_START$#
+#$ITEM_TYPE$#2#$TYPE$#void#$NAME$#Initialize#$ARGS$##$BODY$##$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called immediately after creating objects#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0
+#$ITEM_TYPE$#3#$TYPE$#void#$NAME$#Calculate#$ARGS$#double time#$BODY$#objects->Group::Calculate(time); // Do not remove (for normal operations)
+
+Pitch(RampFloat(time*0.4, -40.0f, 40.0f));
+Roll(RampFloat(time*0.6, -30.0f, 30.0f));
+Needle(knobGroup->PositionVal());#$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called every frame#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0#$STRING_END$#
+  Properties: 
+  {
+    Item: 
+    {
+      FillIn: 1
+      Name: Roll
+      Type: float
+      Args: 0.0f
+      VariablePPP: 0
+      SetPPP: 0
+      GetPPP: 0
+      MemberVariableUsed: 1
+      MemberVariableName: _roll
+      SetMethodUsed: 1
+      SetMethodName: Roll
+      SetMethodBody: #$STRING_START$#_roll = value;
+sphere->DynamicRotate(_roll, Z_AXIS);#$STRING_END$#
+      GetPropertyConst: 1
+      GetMethodUsed: 1
+      GetMethodName: Roll
+      GetMethodBody: 
+      Comment: Roll
+      GenerateBodies: 1
+      EmitChangeEvent: 0
+      DataRange: 
+      DataPreset: 
+      CustomAttribue: 
+    }
+
+    Item: 
+    {
+      FillIn: 1
+      Name: Pitch
+      Type: float
+      Args: 0.0f
+      VariablePPP: 0
+      SetPPP: 0
+      GetPPP: 0
+      MemberVariableUsed: 1
+      MemberVariableName: _pitch
+      SetMethodUsed: 1
+      SetMethodName: Pitch
+      SetMethodBody: #$STRING_START$#_pitch = value;
+sphere->DynamicRotate(_pitch, Y_AXIS);#$STRING_END$#
+      GetPropertyConst: 1
+      GetMethodUsed: 1
+      GetMethodName: Pitch
+      GetMethodBody: 
+      Comment: Pitch
+      GenerateBodies: 1
+      EmitChangeEvent: 0
+      DataRange: 
+      DataPreset: 
+      CustomAttribue: 
+    }
+
+    Item: 
+    {
+      FillIn: 1
+      Name: Needle
+      Type: float
+      Args: 0.0f
+      VariablePPP: 0
+      SetPPP: 0
+      GetPPP: 0
+      MemberVariableUsed: 1
+      MemberVariableName: _needle
+      SetMethodUsed: 1
+      SetMethodName: Needle
+      SetMethodBody: #$STRING_START$#_needle = value;
+needle->DynamicTranslate(0.0f, _needle-20.0f, 0.0f);#$STRING_END$#
+      GetPropertyConst: 1
+      GetMethodUsed: 1
+      GetMethodName: Needle
+      GetMethodBody: 
+      Comment: Knob
+      GenerateBodies: 1
+      EmitChangeEvent: 0
+      DataRange: 
+      DataPreset: 
+      CustomAttribue: 
+    }
+
+  }
+
+  ClassDeclarations: 
+  GenerateComments: 1
+  GenerateSeparateMain: 0
+  Projection: ORTHOGRAPHIC
+  Buffering: DOUBLE_BUFFER
+  DepthBuffer: 1
+  StencilBuffer: 1
+  AccumBuffer: 1
+  AlphaBuffer: 1
+  Multisample: 1
+  FullScreen: 0
+  ViewCulling: 1
+  RedrawType: REDRAW_CONTINUOUS
+  ApplicationType: STANDALONE
+  FrameRate: 30
+  BackgroundColor: 173 173 173 0
+  SoundFiles: 
+  {
+  }
+
+  PluginData: 
+  {
+  }
+
+  TexturePalette: 
+  {
+    0:
+    {
+      Filename: ../../../CockpitTutorial/_adi/textures/adi_ball.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 189679
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    1:
+    {
+      Filename: ../ArtAssets/Textures/adi.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 319433
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    2:
+    {
+      Filename: ../ArtAssets/Textures/needle.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 7272
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    3:
+    {
+      Filename: ../ArtAssets/Textures/knob.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 15496
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+  }
+  MaterialPalette: 1
+    0        1 51 51 51 255 204 204 204 255 0 0 0 255 0 0 0 255 0 "Default Material" 0 
+  InitialEyePointName: 
+  RuntimeAvailableAttributes: 31
+    ObjectClass: GlsClippingGroup 1.0
+  {
+    Name: lightSourceClippingGroup
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+382.5 -380.761963   -520.5
+-382.5 -380.761963   -520.5
+-382.5 384.238037   -520.5
+382.5 384.238037   -520.5
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 5
+    Vertices: 8
+-382.5 -380.761963   -520.5 255 255 255 255
+382.5 -380.761963   -520.5 255 255 255 255
+382.5 380.761963   -520.5 255 255 255 255
+-382.5 380.761963   -520.5 255 255 255 255
+-382.5 -380.761963    520.5 255 255 255 255
+382.5 -380.761963    520.5 255 255 255 255
+382.5 380.761963    520.5 255 255 255 255
+-382.5 380.761963    520.5 255 255 255 255
+    Location: 378.5 378.761963 -235.499969
+    TextureRepeat: 1
+    ClippingActive: 0
+    BottomLeftCorner: -377.5 -380.76001        0
+    TopRightCorner: 382.402405 379.138611        0
+    ShowOutline: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GlsSphere
+    {
+      Name: sphere
+      Location: 376      373        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: -4.2862637970157366e-16 1 0 0 -1 -4.2862637970157366e-16 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 1
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 1
+      DepthTest: 1
+      Color: 0 0 0 255
+      TextureIndex: 0
+      TextureRepeat: 1
+      TextureMap: TEXTURE_MAP_MODULATE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: GOURAUD
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 1
+      MaterialIndices: 1
+        0 
+      TexturePoints: 
+285    142.5     -285
+285   -427.5     -285
+-285   -427.5     -285
+-285    142.5     -285
+      SliceStartDeg: 0
+      SliceEndDeg: 360
+      StackStartDeg: 0
+      StackEndDeg: 180
+      ObjectColor: 251 255 252 255
+      Radii: 
+-1.22158522e-13      285        0
+-285 -1.22158522e-13 -3.49024364e-14
+3.49024364e-14 1.49601047e-29     -285
+      Stacks: 30
+      Slices: 30
+      TextureMappingType: SPHERE
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: sphere
+    }
+    ObjectClass: GLPolygon
+    {
+      Name: needle
+      Location: 146      303        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 2
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 -5.24520874e-06        0 255 255 255 255
+464.999969 -5.24520874e-06        0 255 255 255 255
+464.999969       97        0 255 255 255 255
+0       97        0 255 255 255 255
+      TexturePoints: 
+464.999969 -5.24520874e-06        0
+0 -5.24520874e-06        0
+0       97        0
+464.999969       97        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 -5.24520874e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: needle
+    }
+    ObjectClass: GLPolygon
+    {
+      Name: adi
+      Location: -4       -2        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+765        0        0 255 255 255 255
+765 761.523926        0 255 255 255 255
+0 761.523926        0 255 255 255 255
+      TexturePoints: 
+765        0        0
+0        0        0
+0 761.523926        0
+765 761.523926        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: adi
+    }
+    ObjectClass: GlsKnob 1.1
+    {
+      Name: knobGroup
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      TextureIndex: -1
+      Blink: 0
+      BlinkRate: 2
+      TexturePoints: 
+53.0899048    -52.5        0
+-53.0898438    -52.5        0
+-53.0898438 53.6797485        0
+53.0899048 53.6797485        0
+      PerformGroupCullCheck: 0
+      CullTestChildren: 1
+      Count: 1
+      Vertices: 8
+-72.4080811 -72.1999741        0 255 255 255 255
+72.4082642 -72.1999741        0 255 255 255 255
+72.4082642 72.2002563        0 255 255 255 255
+-72.4080811 72.2002563        0 255 255 255 255
+-72.4080811 -72.1999741        0 255 255 255 255
+72.4082642 -72.1999741        0 255 255 255 255
+72.4082642 72.2002563        0 255 255 255 255
+-72.4080811 72.2002563        0 255 255 255 255
+      Location: 669.089661    105.5        0
+      AngleRange: 270
+      Continuous: 0
+      WhichObject: 0
+      StartAngle: 0
+      EmitDetentValEvent: 1
+      EmitPositionValEvent: 1
+      EmitLimitEvent: 1
+      EmitReleaseEvent: 1
+      DetentVal: 1
+      PositionVal: 0
+      ShowDetentsOnly: 0
+      ClickSelectsDetent: 1
+      RotationOrigin: 0.584472656 -0.230987549 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+            ObjectClass: GLPolygon
+      {
+        Name: knob
+        Location: 741.497864 123.716705        0
+        Visible: 1
+        Pickable: 1
+        Rotation: 0        0        0
+        DynamicTranslate: 0        0        0
+        DynamicScale: 1        1        1
+        DCSMatrix: -0.86111270988610267 0.5084175035815427 0 0 -0.5084175035815427 -0.86111270988610267 0 0 0 0 1 0 0 0 0 1 
+        LineWidth: 1
+        CullBackFace: 0
+        AlphaMode: ALPHA_MODE_256_LEVEL
+        AntiAlias: 0
+        DepthTest: 2
+        Color: 0 0 0 255
+        TextureIndex: 3
+        TextureRepeat: 0
+        TextureMap: TEXTURE_MAP_REPLACE
+        BlendColor: 255 255 255 255
+        TextureMinFilter: TEXTURE_FILTER_LINEAR
+        TextureMagFilter: TEXTURE_FILTER_LINEAR
+        PolygonMode: POLY_MODE_FILLED
+        PolygonEnd: POLY_CLOSED
+        PolygonOffset: 0
+        Shading: FLAT
+        LineStippleMultiplier: 1
+        LineStipplePattern: 65535
+        Blink: 0
+        BlinkRate: 2
+        LightingEnabled: 0
+        MaterialIndices: 1
+          0 
+        Vertices: 4
+7.71753548e-05 -2.390995e-05        0 255 255 255 255
+-91.432518 53.9835434        0 255 255 255 255
+-144.816269 -36.4331627        0 255 255 255 255
+-53.3836479 -90.4166794        0 255 255 255 255
+        TexturePoints: 
+-91.432518 53.9835434        0
+7.71753548e-05 -2.390995e-05        0
+-53.3836479 -90.4166794        0
+-144.816269 -36.4331627        0
+        TextureCoords: 4
+0        0        0
+1.00000024        0        0
+1.00000024        1        0
+0        1        0
+        Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+        RotationOrigin: -72.4081116 -18.2165966 0
+        InitializationCode: 
+        ObjectCallbackCode: 
+        ProtectionMode: PROTECTED
+        Locked: 0
+        AlternateClassName: 
+        AlternateClassHeaderFile: (None)
+        LinkedAttributes: {}
+        GenerateMemberVariable: 1
+        UserDefinedAttributes: 
+        CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        EndMarker: knob
+      }
+
+      Preview: 0
+      NumDetents: 0
+      EndMarker: knobGroup
+    }
+    ObjectClass: GlsLightSource
+    {
+      Name: lightSource
+      Location: 381      373     -755
+      Visible: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: -0.99991630980262369 0 -0.013056524695638876 0 0 1 0 0 0.013056524695638876 0 -0.99991630980262369 0 0 0 0 1 
+      MaterialIndices: 1
+        0 
+      Vertices: 6
+0        0        0 255 255 255 255
+0.0130565353        0 -0.999914706 255 255 255 255
+24.3450489      -25 50.3221474 255 255 255 255
+-25.6506958      -25 49.6693344 255 255 255 255
+-25.6506958       25 49.6693344 255 255 255 255
+24.3450489       25 50.3221474 255 255 255 255
+      SourceAmbient: 0 0 0 255
+      SourceDiffuse: 255 255 255 255
+      SourceSpecular: 255 255 255 255
+      SpotCutoff: 180
+      SpotExponent: 0
+      ConstantAttenuation: 1
+      LinearAttenuation: 0
+      QuadraticAttenuation: 0
+      LightType: LIGHT_INFINITE
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: lightSource
+    }
+
+    AbsoluteCorners: 1
+    EndMarker: lightSourceClippingGroup
+  }
+
+}
+
