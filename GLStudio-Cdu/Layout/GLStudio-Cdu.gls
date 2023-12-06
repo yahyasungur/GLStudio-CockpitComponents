@@ -1,0 +1,651 @@
+GL_Studio_Version: 7.0.0
+DocumentPreferences: 
+{
+  SettingPaletteFile: (None)
+}
+
+DisplayFrame: EditorDisplayFrame
+{
+  Width: 441
+  Height: 507
+  Title: GLStudio-Cdu
+  InitialX: 0
+  InitialY: 0
+  MaxWidth: -1
+  MaxHeight: -1
+  MinWidth: -1
+  MinHeight: -1
+  Resizable: 0
+  HasBorder: 1
+  MainFileName: 
+  DerivedClass: GLStudio_CduClass
+  StandaloneHeaderFile: GLStudio_CduApp.h
+  StandaloneSourceFile: GLStudio_CduApp.cpp
+  StandaloneClassInstance: gLStudio_Cdu
+  ComponentSourceFile: GLStudio_Cdu.cpp
+  ComponentHeaderFile: GLStudio_Cdu.h
+  ComponentUserBaseClass: 0
+  ClassDerivedFrom: 
+  ClassDerivedFromInit: 
+  RootName: GLStudio-Cdu
+  FillInFromRoot: 1
+  GeneratedSourcePath: 
+  MetaIdlFileUserCode: 
+  MetaIdlDeclarationUserCode: 
+  ExtraCodeSource: 
+  ExtraCodeHeader: 
+  MainLoopSource: 
+  MainInitSource: 
+  ClassCodeSource: #$STRING_START$#
+#$ITEM_TYPE$#2#$TYPE$#void#$NAME$#Initialize#$ARGS$##$BODY$##$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called immediately after creating objects#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0
+#$ITEM_TYPE$#3#$TYPE$#void#$NAME$#Calculate#$ARGS$#double time#$BODY$#objects->Group::Calculate(time); // Do not remove (for normal operations)
+#$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called every frame#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0#$STRING_END$#
+  ClassDeclarations: 
+  GenerateComments: 1
+  GenerateSeparateMain: 0
+  Projection: ORTHOGRAPHIC
+  Buffering: DOUBLE_BUFFER
+  DepthBuffer: 1
+  StencilBuffer: 1
+  AccumBuffer: 1
+  AlphaBuffer: 1
+  Multisample: 0
+  FullScreen: 0
+  ViewCulling: 1
+  RedrawType: REDRAW_CONSTANT
+  ApplicationType: STANDALONE
+  FrameRate: 30
+  BackgroundColor: 173 173 173 255
+  SoundFiles: 
+  {
+  }
+
+  PluginData: 
+  {
+  }
+
+  TexturePalette: 
+  {
+    0:
+    {
+      Filename: ../ArtAssets/Textures/CDU.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 131533
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    1:
+    {
+      Filename: ../Packages/WidgetSkinDefaultDark/textures/4radius_Button_Default.9.png_1px_cropped.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 417
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    2:
+    {
+      Filename: ../Packages/WidgetSkinDefaultDark/textures/4radius_Button_Hovered.9.png_1px_cropped.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 415
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    3:
+    {
+      Filename: ../Packages/WidgetSkinDefaultDark/textures/4radius_Button_Pressed.9.png_1px_cropped.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 419
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    4:
+    {
+      Filename: ../Packages/WidgetSkinDefaultDark/textures/4radius_Button_Pressed_Hovered.9.png_1px_cropped.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 758
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+  }
+  MaterialPalette: 1
+    0        1 51 51 51 255 204 204 204 255 0 0 0 255 0 0 0 255 1 "Default Material" 0 
+  InitialEyePointName: 
+  RuntimeAvailableAttributes: 2147483647
+    ObjectClass: GLPolygon
+  {
+    Name: polygon
+    Location: 222.5      335        0
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_FILLED
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+-162.5     -140        0 0 0 0 255
+162.5     -140        0 0 0 0 255
+162.5      140        0 0 0 0 255
+-162.5      140        0 0 0 0 255
+    TexturePoints: 
+162.5     -140        0
+-162.5     -140        0
+-162.5      185        0
+162.5      185        0
+    Normals: 4
+0        0 0.99999994
+0       -0 0.99999994
+0        0 0.99999994
+-0        0 0.99999994
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    EndMarker: polygon
+  }
+  ObjectClass: GLPolygon
+  {
+    Name: CDU
+    Location: 1       -1        0
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: 0
+    TextureRepeat: 0
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_FILLED
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+438        0        0 255 255 255 255
+438      508        0 255 255 255 255
+0      508        0 255 255 255 255
+    TexturePoints: 
+438        0        0
+0        0        0
+0      508        0
+438      508        0
+    TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+    Normals: 4
+0        0        1
+0       -0        1
+0        0        1
+-0        0        1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    EndMarker: CDU
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: textBox
+    Location: 135      400 2.75545535e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_OUTLINE
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 0 0 0 255
+160        0        0 0 0 0 255
+160       45 -5.5109107e-15 0 0 0 255
+0       45 -5.5109107e-15 0 0 0 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 17
+    CellWidth: 16
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: LEFT
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 34 255 0 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 1
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_TOP
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: SATCOM\sMAIN\sMENU
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 12
+    TextBGColor: 255 255 255 0
+    TextFGColor: 34 255 0 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: textBox
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: textBox_2
+    Location: 85      245 2.75545535e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_OUTLINE
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 0 0 0 255
+160        0        0 0 0 0 255
+160       45 -5.5109107e-15 0 0 0 255
+0       45 -5.5109107e-15 0 0 0 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 17
+    CellWidth: 16
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: LEFT
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 34 255 0 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 1
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_TOP
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <-\sSUBMENU
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 12
+    TextBGColor: 255 255 255 0
+    TextFGColor: 34 255 0 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: textBox_2
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: textBox_2_1
+    Location: 250      245 2.75545535e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 0 0 0 255
+160        0        0 0 0 0 255
+160       45 -5.5109107e-15 0 0 0 255
+0       45 -5.5109107e-15 0 0 0 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 17
+    CellWidth: 16
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: LEFT
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 34 255 0 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 1
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_TOP
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: DIRECTORY\s->
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 12
+    TextBGColor: 255 255 255 0
+    TextFGColor: 34 255 0 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: textBox_2_1
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: textBox_1
+    Location: 95      365 2.75545535e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_OUTLINE
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 0 0 0 255
+180        0        0 0 0 0 255
+180       45 -5.5109107e-15 0 0 0 255
+0       45 -5.5109107e-15 0 0 0 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 17
+    CellWidth: 16
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: LEFT
+    LineSpacing: 1.5
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 34 255 0 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 1
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_TOP
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: #$STRING_START$#SAT1 NOT AVAILABLE
+SAT2 NOT AVAILABLE#$STRING_END$#
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 12
+    TextBGColor: 255 255 255 0
+    TextFGColor: 34 255 0 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: textBox_1
+  }
+
+}
+

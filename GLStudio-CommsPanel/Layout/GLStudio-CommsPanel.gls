@@ -1,0 +1,2734 @@
+GL_Studio_Version: 7.0.0
+DocumentPreferences: 
+{
+  SettingPaletteFile: (None)
+}
+
+DisplayFrame: EditorDisplayFrame
+{
+  Width: 267
+  Height: 500
+  Title: GLStudio-CommsPanel
+  InitialX: 0
+  InitialY: 0
+  MaxWidth: -1
+  MaxHeight: -1
+  MinWidth: -1
+  MinHeight: -1
+  Resizable: 0
+  HasBorder: 1
+  MainFileName: 
+  DerivedClass: GLStudio_CommsPanelClass
+  StandaloneHeaderFile: GLStudio_CommsPanelApp.h
+  StandaloneSourceFile: GLStudio_CommsPanelApp.cpp
+  StandaloneClassInstance: gLStudio_CommsPanel
+  ComponentSourceFile: GLStudio_CommsPanel.cpp
+  ComponentHeaderFile: GLStudio_CommsPanel.h
+  ComponentUserBaseClass: 0
+  ClassDerivedFrom: 
+  ClassDerivedFromInit: 
+  RootName: GLStudio-CommsPanel
+  FillInFromRoot: 1
+  GeneratedSourcePath: 
+  MetaIdlFileUserCode: 
+  MetaIdlDeclarationUserCode: 
+  ExtraCodeSource: 
+  ExtraCodeHeader: 
+  MainLoopSource: 
+  MainInitSource: 
+  ClassCodeSource: #$STRING_START$#
+#$ITEM_TYPE$#2#$TYPE$#void#$NAME$#Initialize#$ARGS$##$BODY$##$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called immediately after creating objects#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0
+#$ITEM_TYPE$#3#$TYPE$#void#$NAME$#Calculate#$ARGS$#double time#$BODY$#objects->Group::Calculate(time); // Do not remove (for normal operations)
+
+if(pushButton1->State() == 1)
+{	
+	indicator1->Visibility(true);
+	indicator2->Visibility(false);
+	text1->String(std::to_string(knob1Knob->PositionVal()*(2.5f)));
+}
+else
+{
+	indicator2->Visibility(true);
+	indicator1->Visibility(false);
+	text2->String(std::to_string(knob1Knob->PositionVal()*(2.5f)));
+}
+
+if(pushButton2->State() == 1)
+{	
+	indicator3->Visibility(true);
+	indicator4->Visibility(false);
+	text3->String(std::to_string(knob2Knob->PositionVal()*(2.5f)));
+}
+else
+{
+	indicator4->Visibility(true);
+	indicator3->Visibility(false);
+	text4->String(std::to_string(knob2Knob->PositionVal()*(2.5f)));
+}
+
+if(pushButton3->State() == 1)
+{	
+	indicator5->Visibility(true);
+	indicator6->Visibility(false);
+	text5->String(std::to_string(knob3Knob->PositionVal()*(2.5f)));
+}
+else
+{
+	indicator6->Visibility(true);
+	indicator5->Visibility(false);
+	text6->String(std::to_string(knob3Knob->PositionVal()*(2.5f)));
+}
+
+if(pushButton4->State() == 1)
+{	
+	indicator7->Visibility(true);
+	indicator8->Visibility(false);
+	text7->String(std::to_string(knob4Knob->PositionVal()*(2.5f)));
+}
+else
+{
+	indicator8->Visibility(true);
+	indicator7->Visibility(false);
+	text8->String(std::to_string(knob4Knob->PositionVal()*(2.5f)));
+}#$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called every frame#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0#$STRING_END$#
+  Properties: 
+  {
+  }
+
+  ClassDeclarations: 
+  GenerateComments: 1
+  GenerateSeparateMain: 0
+  Projection: ORTHOGRAPHIC
+  Buffering: DOUBLE_BUFFER
+  DepthBuffer: 1
+  StencilBuffer: 1
+  AccumBuffer: 1
+  AlphaBuffer: 1
+  Multisample: 0
+  FullScreen: 0
+  ViewCulling: 1
+  RedrawType: REDRAW_CONSTANT
+  ApplicationType: STANDALONE
+  FrameRate: 30
+  BackgroundColor: 173 173 173 255
+  SoundFiles: 
+  {
+  }
+
+  PluginData: 
+  {
+  }
+
+  TexturePalette: 
+  {
+    0:
+    {
+      Filename: ../ArtAssets/Textures/commsPanel.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 28418
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    1:
+    {
+      Filename: ../ArtAssets/Textures/knob.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 6865
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+  }
+  MaterialPalette: 1
+    0        1 51 51 51 255 204 204 204 255 0 0 0 255 0 0 0 255 1 "Default Material" 0 
+  InitialEyePointName: 
+  RuntimeAvailableAttributes: 4294967295
+    ObjectClass: GLPolygon
+  {
+    Name: commsPanel
+    Location: 0.99999994 1.31708884        0
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: 0
+    TextureRepeat: 0
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_FILLED
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+265        0        0 255 255 255 255
+265 497.682922        0 255 255 255 255
+0 497.682922        0 255 255 255 255
+    TexturePoints: 
+265        0        0
+0        0        0
+0 497.682922        0
+265 497.682922        0
+    TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+    Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    EndMarker: commsPanel
+  }
+  ObjectClass: GlsPushButton 1.0
+  {
+    Name: pushButton1_2
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+17.5    -17.5        0
+-17.5    -17.5        0
+-17.5     17.5        0
+17.5     17.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+    Location: 225.5    409.5        0
+    WhichObjectPosUp: 0
+    WhichObjectPosDown: 0
+    InitialState: 0
+    EmitStateChangeEvent: 1
+    State: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: btn1_2
+      Location: 208      392        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 1.01327896e-06        0 255 255 255 255
+35 1.01327896e-06        0 255 255 255 255
+35       35        0 255 255 255 255
+0       35        0 255 255 255 255
+      TexturePoints: 
+35 1.01327896e-06        0
+0 1.01327896e-06        0
+0       35        0
+35       35        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 1.01327896e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: btn1_2
+    }
+
+    Preview: 1
+    Toggle: 0
+    EndMarker: pushButton1_2
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: knob1Knob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+32.5    -32.5        0
+-32.5    -32.5        0
+-32.5     32.5        0
+32.5     32.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+    Location: 215.5    418.5        0
+    AngleRange: 360
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: knob1
+      Location: 183      386        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+65        0        0 255 255 255 255
+65       65        0 255 255 255 255
+0       65        0 255 255 255 255
+      TexturePoints: 
+65        0        0
+0        0        0
+0       65        0
+65       65        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 32.5     32.5 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: knob1
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: knob1Knob
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: knob2Knob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+32.5    -32.5        0
+-32.5    -32.5        0
+-32.5     32.5        0
+32.5     32.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+    Location: 215.5    303.5        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: knob2
+      Location: 183      271        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+65        0        0 255 255 255 255
+65       65        0 255 255 255 255
+0       65        0 255 255 255 255
+      TexturePoints: 
+65        0        0
+0        0        0
+0       65        0
+65       65        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 32.5     32.5 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: knob2
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: knob2Knob
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: knob3Knob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+32.5    -32.5        0
+-32.5    -32.5        0
+-32.5     32.5        0
+32.5     32.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+    Location: 215.5    189.5        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: knob3
+      Location: 183      157        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+65        0        0 255 255 255 255
+65       65        0 255 255 255 255
+0       65        0 255 255 255 255
+      TexturePoints: 
+65        0        0
+0        0        0
+0       65        0
+65       65        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 32.5     32.5 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: knob3
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: knob3Knob
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: knob4Knob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+32.5    -32.5        0
+-32.5    -32.5        0
+-32.5     32.5        0
+32.5     32.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+-32.5    -32.5        0 255 255 255 255
+32.5    -32.5        0 255 255 255 255
+32.5     32.5        0 255 255 255 255
+-32.5     32.5        0 255 255 255 255
+    Location: 215.5     74.5        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: knob4
+      Location: 183       42        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+65        0        0 255 255 255 255
+65       65        0 255 255 255 255
+0       65        0 255 255 255 255
+      TexturePoints: 
+65        0        0
+0        0        0
+0       65        0
+65       65        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 32.5     32.5 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: knob4
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: knob4Knob
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text1
+    Location: 43.3333321      440 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 1.07288361e-06        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text1
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator1
+    Location: 130      440 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+23.3333282        0        0 255 255 255 255
+23.3333282       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 7.89761486e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator1
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator2
+    Location: 130      380 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+23.3333282        0        0 255 255 255 255
+23.3333282       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 7.89761486e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator2
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator3
+    Location: 130      325 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+23.3333282        0        0 255 255 255 255
+23.3333282       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 7.89761486e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator3
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator4
+    Location: 130      270 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+23.3333282        0        0 255 255 255 255
+23.3333282       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 7.89761486e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator4
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator5
+    Location: 139.285721      185 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+10        0        0 255 255 255 255
+10       75 -3.0616171e-15 255 255 255 255
+0       75 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+-5.26436725e-06        0        0
+-5.26436725e-06        0        0
+-5.26436725e-06        0        0
+-5.26436725e-06        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: -5.26436725e-06        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator5
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator6
+    Location: 112.857147      150 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+60        0        0 255 255 255 255
+60       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+-1.14951611e-07        0        0
+-1.14951611e-07        0        0
+-1.14951611e-07        0        0
+-1.14951611e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: -1.14951611e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator6
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator7
+    Location: 130       95 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+23.3333282        0        0 255 255 255 255
+23.3333282       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+7.89761486e-07        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 7.89761486e-07        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator7
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: indicator8
+    Location: 126.887756       35 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+32.1428642        0        0 255 255 255 255
+32.1428642       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+2.34206777e-06        0        0
+2.34206777e-06        0        0
+2.34206777e-06        0        0
+2.34206777e-06        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: <
+    RotationOrigin: 2.34206777e-06        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: indicator8
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text2
+    Location: 43.3333321      380 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+1.07288361e-06        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 1.07288361e-06        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text2
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text3
+    Location: 45      325 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text3
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text4
+    Location: 45      270 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text4
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text5
+    Location: 45      210 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text5
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text6
+    Location: 45      150 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text6
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text7
+    Location: 45       95 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text7
+  }
+  ObjectClass: GlsTextBox 2.0
+  {
+    Name: text8
+    Location: 45       35 1.53080855e-15
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: -1
+    TextureRepeat: 1
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_POINTS
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+80        0        0 255 255 255 255
+80       25 -3.0616171e-15 255 255 255 255
+0       25 -3.0616171e-15 255 255 255 255
+    TexturePoints: 
+0        0        0
+0        0        0
+0        0        0
+0        0        0
+    Border: 0
+    ConstrainCellRatio: 1
+    ControlCellSize: 0
+    CellHeight: 23
+    CellWidth: 20
+    Halo: 0
+    HaloColor: 0 0 0 0
+    Justify: CENTER
+    LineSpacing: 1
+    LockCellSize: 1
+    Shadow: 0
+    ShadowColor: 128 128 128 255
+    ShadowOffset: 0.129999995 -0.129999995        0
+    Uppercase: 0
+    WrapText: 1
+    Baseline: 0
+    BgColor: 255 255 255 0
+    TextColor: 255 255 255 255
+    FauxBold: 0
+    Inverse: 0
+    CharSpacing: 1
+    CharScaling: 0.980000079
+    StrikeThru: 0
+    Underline: 0
+    VerticalAlignment: ALIGN_CENTER
+    LeftToRight: 1
+    TabSpacing: 4
+    Text: 152.12
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    Font: Arial Regular 16
+    TextBGColor: 255 255 255 0
+    TextFGColor: 255 255 255 255
+    InitialTextCount: 0
+    ScaleTextByDragging: 1
+    EndMarker: text8
+  }
+  ObjectClass: GlsPushButton 1.0
+  {
+    Name: pushButton1
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+17.5    -17.5        0
+-17.5    -17.5        0
+-17.5     17.5        0
+17.5     17.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+    Location: 215.5    419.5        0
+    WhichObjectPosUp: 0
+    WhichObjectPosDown: 0
+    InitialState: 1
+    EmitStateChangeEvent: 1
+    State: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: btn1
+      Location: 198      402        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 1.01327896e-06        0 255 255 255 255
+35 1.01327896e-06        0 255 255 255 255
+35       35        0 255 255 255 255
+0       35        0 255 255 255 255
+      TexturePoints: 
+35 1.01327896e-06        0
+0 1.01327896e-06        0
+0       35        0
+35       35        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 1.01327896e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: btn1
+    }
+
+    Preview: 1
+    Toggle: 1
+    EndMarker: pushButton1
+  }
+  ObjectClass: GlsPushButton 1.0
+  {
+    Name: pushButton2
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+17.5    -17.5        0
+-17.5    -17.5        0
+-17.5     17.5        0
+17.5     17.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+    Location: 215.5    304.5        0
+    WhichObjectPosUp: 0
+    WhichObjectPosDown: 0
+    InitialState: 1
+    EmitStateChangeEvent: 1
+    State: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: btn1_1
+      Location: 198      287        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 1.01327896e-06        0 255 255 255 255
+35 1.01327896e-06        0 255 255 255 255
+35       35        0 255 255 255 255
+0       35        0 255 255 255 255
+      TexturePoints: 
+35 1.01327896e-06        0
+0 1.01327896e-06        0
+0       35        0
+35       35        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 1.01327896e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: btn1_1
+    }
+
+    Preview: 1
+    Toggle: 1
+    EndMarker: pushButton2
+  }
+  ObjectClass: GlsPushButton 1.0
+  {
+    Name: pushButton3
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+17.5    -17.5        0
+-17.5    -17.5        0
+-17.5     17.5        0
+17.5     17.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+    Location: 215.5    189.5        0
+    WhichObjectPosUp: 0
+    WhichObjectPosDown: 0
+    InitialState: 1
+    EmitStateChangeEvent: 1
+    State: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: btn1_1_1
+      Location: 198      172        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 1.01327896e-06        0 255 255 255 255
+35 1.01327896e-06        0 255 255 255 255
+35       35        0 255 255 255 255
+0       35        0 255 255 255 255
+      TexturePoints: 
+35 1.01327896e-06        0
+0 1.01327896e-06        0
+0       35        0
+35       35        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 1.01327896e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: btn1_1_1
+    }
+
+    Preview: 1
+    Toggle: 1
+    EndMarker: pushButton3
+  }
+  ObjectClass: GlsPushButton 1.0
+  {
+    Name: pushButton4
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+17.5    -17.5        0
+-17.5    -17.5        0
+-17.5     17.5        0
+17.5     17.5        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+-17.5    -17.5        0 255 255 255 255
+17.5    -17.5        0 255 255 255 255
+17.5     17.5        0 255 255 255 255
+-17.5     17.5        0 255 255 255 255
+    Location: 215.5     74.5        0
+    WhichObjectPosUp: 0
+    WhichObjectPosDown: 0
+    InitialState: 1
+    EmitStateChangeEvent: 1
+    State: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: btn1_1_1_1
+      Location: 198       57        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0 1.01327896e-06        0 255 255 255 255
+35 1.01327896e-06        0 255 255 255 255
+35       35        0 255 255 255 255
+0       35        0 255 255 255 255
+      TexturePoints: 
+35 1.01327896e-06        0
+0 1.01327896e-06        0
+0       35        0
+35       35        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 0 1.01327896e-06 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: btn1_1_1_1
+    }
+
+    Preview: 1
+    Toggle: 1
+    EndMarker: pushButton4
+  }
+
+}
+

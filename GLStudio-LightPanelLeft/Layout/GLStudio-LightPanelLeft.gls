@@ -1,0 +1,1167 @@
+GL_Studio_Version: 7.0.0
+DocumentPreferences: 
+{
+  SettingPaletteFile: (None)
+}
+
+DisplayFrame: EditorDisplayFrame
+{
+  Width: 507
+  Height: 360
+  Title: GLStudio-LightPanelLeft
+  InitialX: 0
+  InitialY: 0
+  MaxWidth: -1
+  MaxHeight: -1
+  MinWidth: -1
+  MinHeight: -1
+  Resizable: 0
+  HasBorder: 1
+  MainFileName: 
+  DerivedClass: GLStudio_LightPanelLeftClass
+  StandaloneHeaderFile: GLStudio_LightPanelLeftApp.h
+  StandaloneSourceFile: GLStudio_LightPanelLeftApp.cpp
+  StandaloneClassInstance: gLStudio_LightPanelLeft
+  ComponentSourceFile: GLStudio_LightPanelLeft.cpp
+  ComponentHeaderFile: GLStudio_LightPanelLeft.h
+  ComponentUserBaseClass: 0
+  ClassDerivedFrom: 
+  ClassDerivedFromInit: 
+  RootName: GLStudio-LightPanelLeft
+  FillInFromRoot: 1
+  GeneratedSourcePath: 
+  MetaIdlFileUserCode: 
+  MetaIdlDeclarationUserCode: 
+  ExtraCodeSource: 
+  ExtraCodeHeader: 
+  MainLoopSource: 
+  MainInitSource: 
+  ClassCodeSource: #$STRING_START$#
+#$ITEM_TYPE$#2#$TYPE$#void#$NAME$#Initialize#$ARGS$##$BODY$##$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called immediately after creating objects#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0
+#$ITEM_TYPE$#3#$TYPE$#void#$NAME$#Calculate#$ARGS$#double time#$BODY$#objects->Group::Calculate(time); // Do not remove (for normal operations)
+#$GEN_BODY$#1#$PPP$#0#$COMMENT$#This code is called every frame#$PRESETS$#<?xml version="1.0" encoding="UTF-8"?>
+<CustomAttributes>
+</CustomAttributes>
+#$METHOD_IS_CONST$#0#$STRING_END$#
+  ClassDeclarations: 
+  GenerateComments: 1
+  GenerateSeparateMain: 0
+  Projection: ORTHOGRAPHIC
+  Buffering: DOUBLE_BUFFER
+  DepthBuffer: 1
+  StencilBuffer: 1
+  AccumBuffer: 1
+  AlphaBuffer: 1
+  Multisample: 1
+  FullScreen: 0
+  ViewCulling: 1
+  RedrawType: REDRAW_CONSTANT
+  ApplicationType: STANDALONE
+  FrameRate: 30
+  BackgroundColor: 173 173 173 255
+  SoundFiles: 
+  {
+  }
+
+  PluginData: 
+  {
+  }
+
+  TexturePalette: 
+  {
+    0:
+    {
+      Filename: ../ArtAssets/Textures/lightspanel_lft.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 78822
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    1:
+    {
+      Filename: ../ArtAssets/Textures/consoleKnob.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 9588
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    2:
+    {
+      Filename: ../ArtAssets/Textures/pnlKnob.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 6348
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    3:
+    {
+      Filename: ../ArtAssets/Textures/floodKnob.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 6497
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    4:
+    {
+      Filename: ../ArtAssets/Textures/up.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 1343
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    5:
+    {
+      Filename: ../ArtAssets/Textures/down.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 1406
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+    6:
+    {
+      Filename: ../ArtAssets/Textures/neutral.png
+      GenerateInline: 1
+      DesiredLoadHeight: 0
+      DesiredLoadWidth: 0
+      CompressionFactor: 75
+      CompressedSize: 1067
+      ImageCodec: GLS_CODEC_LZ77
+      ReverseAlpha: 0
+      GLTextureCompression: 0
+      AllowNPOT: 1
+    }
+  }
+  MaterialPalette: 1
+    0        1 51 51 51 255 204 204 204 255 0 0 0 255 0 0 0 255 1 "Default Material" 0 
+  InitialEyePointName: 
+  RuntimeAvailableAttributes: 2147483647
+    ObjectClass: GLPolygon
+  {
+    Name: lightspanel_lft
+    Location: -2       -3        0
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    LineWidth: 1
+    CullBackFace: 0
+    AlphaMode: ALPHA_MODE_256_LEVEL
+    AntiAlias: 0
+    DepthTest: 2
+    Color: 0 0 0 255
+    TextureIndex: 0
+    TextureRepeat: 0
+    TextureMap: TEXTURE_MAP_REPLACE
+    BlendColor: 255 255 255 255
+    TextureMinFilter: TEXTURE_FILTER_LINEAR
+    TextureMagFilter: TEXTURE_FILTER_LINEAR
+    PolygonMode: POLY_MODE_FILLED
+    PolygonEnd: POLY_CLOSED
+    PolygonOffset: 0
+    Shading: FLAT
+    LineStippleMultiplier: 1
+    LineStipplePattern: 65535
+    Blink: 0
+    BlinkRate: 2
+    LightingEnabled: 0
+    MaterialIndices: 1
+      0 
+    Vertices: 4
+0        0        0 255 255 255 255
+512        0        0 255 255 255 255
+512      364        0 255 255 255 255
+0      364        0 255 255 255 255
+    TexturePoints: 
+512        0        0
+0        0        0
+0      364        0
+512      364        0
+    TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+    Normals: 4
+0        0        1
+0       -0        1
+0        0        1
+-0        0        1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    EndMarker: lightspanel_lft
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: consoleKnobKnob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix: -0.65931558949346369 0.75187677793730068 0 0 -0.75187677793730068 -0.65931558949346369 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+6.48986816 44.9265976        0
+45.3891907 0.566185474        0
+1.02878523 -38.3331108        0
+-37.8704834 6.0272603        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-45.3891602 -44.9262199        0 255 255 255 255
+45.3891907 -44.9262199        0 255 255 255 255
+45.3891907 44.92659        0 255 255 255 255
+-45.3891602 44.92659        0 255 255 255 255
+-45.3891602 -44.9262199        0 255 255 255 255
+45.3891907 -44.9262199        0 255 255 255 255
+45.3891907 44.92659        0 255 255 255 255
+-45.3891602 44.92659        0 255 255 255 255
+    Location: 194.366699 47.6008759        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: -1.86669922 -2.60087585 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: consoleKnob
+      Location: 239.755936 48.1670647        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: -0.65931558949346369 0.75187677793730068 0 0 -0.75187677793730068 -0.65931558949346369 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+-4.29340471e-05 4.37484778e-06        0 255 255 255 255
+-38.8993378 44.3604012        0 255 255 255 255
+-90.7784042 -1.13198638        0 255 255 255 255
+-51.8791351 -45.4924088        0 255 255 255 255
+      TexturePoints: 
+-38.8993378 44.3604012        0
+-4.29340471e-05 4.37484778e-06        0
+-51.8791351 -45.4924088        0
+-90.7784042 -1.13198638        0
+      TextureCoords: 4
+3.82568359e-08 1.31348941e-08        0
+0.99999994 -4.34146585e-08        0
+0.999999821 0.999999702        0
+4.00309794e-08        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: -47.2559357 -3.16706467 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: consoleKnob
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: consoleKnobKnob
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: consoleKnobKnob_1
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix: -0.65931558949346369 0.75187677793730068 0 0 -0.75187677793730068 -0.65931558949346369 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+6.48986816 44.9265976        0
+45.3891907 0.566185474        0
+1.02878523 -38.3331108        0
+-37.8704834 6.0272603        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-45.3891907 -44.9262238        0 255 255 255 255
+45.3891907 -44.9262238        0 255 255 255 255
+45.3891907 44.92659        0 255 255 255 255
+-45.3891907 44.92659        0 255 255 255 255
+-45.3891907 -44.9262238        0 255 255 255 255
+45.3891907 -44.9262238        0 255 255 255 255
+45.3891907 44.92659        0 255 255 255 255
+-45.3891907 44.92659        0 255 255 255 255
+    Location: 407.366699 244.600876        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: -2.36669922 -2.10087585 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: consoleKnob_1
+      Location: 452.75592 245.167068        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: -0.65931558949346369 0.75187677793730068 0 0 -0.75187677793730068 -0.65931558949346369 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 1
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+-4.29340471e-05 4.37484778e-06        0 255 255 255 255
+-38.8993378 44.3604012        0 255 255 255 255
+-90.7784042 -1.13198638        0 255 255 255 255
+-51.8791351 -45.4924088        0 255 255 255 255
+      TexturePoints: 
+-38.8993378 44.3604012        0
+-4.29340471e-05 4.37484778e-06        0
+-51.8791351 -45.4924088        0
+-90.7784042 -1.13198638        0
+      TextureCoords: 4
+3.82568359e-08 1.31348941e-08        0
+0.99999994 -4.34146585e-08        0
+0.999999821 0.999999702        0
+4.00309794e-08        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: -47.7559204 -2.66706848 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: consoleKnob_1
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: consoleKnobKnob_1
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: pnlKnobKnob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+25 -25.4237213        0
+-25 -25.4237213        0
+-25 24.5762787        0
+25 24.5762787        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-35.3861389 -23.8868866        0 255 255 255 255
+32.6820984 -23.8868866        0 255 255 255 255
+32.6820984 37.3150635        0 255 255 255 255
+-35.3861389 37.3150635        0 255 255 255 255
+-35.3861389 -23.8868866        0 255 255 255 255
+32.6820984 -23.8868866        0 255 255 255 255
+32.6820984 37.3150635        0 255 255 255 255
+-35.3861389 37.3150635        0 255 255 255 255
+    Location: 248 144.576263        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0 7.62939453e-06 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: pnlKnob
+      Location: 280.682098 132.865082        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: -0.24047544990187877 0.97066584436399128 0 0 -0.97066584436399128 -0.24047544990187877 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 2
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+3.66090285e-06 -0.000241226604        0 255 255 255 255
+-13.4734058 49.0262451        0 255 255 255 255
+-68.0682449 36.8507385        0 255 255 255 255
+-54.5948257 -12.1757088        0 255 255 255 255
+      TexturePoints: 
+-13.4734058 49.0262451        0
+3.66090285e-06 -0.000241226604        0
+-54.5948257 -12.1757088        0
+-68.0682449 36.8507385        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: -34.0340996 18.4252605 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: pnlKnob
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: pnlKnobKnob
+  }
+  ObjectClass: GlsKnob 1.1
+  {
+    Name: floodKnobKnob
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+41.9675903 -42.0991135        0
+-41.9675903 -42.0991135        0
+-41.9675903 41.8360672        0
+41.9675903 41.8360672        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 1
+    Vertices: 8
+-41.9675903 -42.0991135        0 255 255 255 255
+41.9675903 -42.0991135        0 255 255 255 255
+41.9675903 42.0991058        0 255 255 255 255
+-41.9675903 42.0991058        0 255 255 255 255
+-41.9675903 -42.0991135        0 255 255 255 255
+41.9675903 -42.0991135        0 255 255 255 255
+41.9675903 42.0991058        0 255 255 255 255
+-41.9675903 42.0991058        0 255 255 255 255
+    Location: 352    152.5        0
+    AngleRange: 270
+    Continuous: 0
+    WhichObject: 0
+    StartAngle: 0
+    EmitDetentValEvent: 1
+    EmitPositionValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    PositionVal: 0
+    ShowDetentsOnly: 0
+    ClickSelectsDetent: 0
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: floodKnob
+      Location: 344.389771 110.400986        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix: 0.82630217757244218 0.56324070294687523 0 0 -0.56324070294687523 0.82630217757244218 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 3
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+6.41197184e-05 -9.95208247e-05        0 255 255 255 255
+49.5778046 33.7940598        0 255 255 255 255
+15.2203903 84.1981201        0 255 255 255 255
+-34.357357 50.4039688        0 255 255 255 255
+      TexturePoints: 
+49.5778046 33.7940598        0
+6.41197184e-05 -9.95208247e-05        0
+-34.357357 50.4039688        0
+15.2203903 84.1981201        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0        0        1
+0        0        1
+0        0        1
+      RotationOrigin: 7.61022949 42.0990143 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: floodKnob
+    }
+
+    Preview: 0
+    NumDetents: 0
+    EndMarker: floodKnobKnob
+  }
+  ObjectClass: GlsSwitch 1.1
+  {
+    Name: downSwitch
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+9.5      -26        0
+-9.5      -26        0
+-9.5       -7        0
+9.5       -7        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 2
+    Vertices: 8
+-9.5      -26        0 255 255 255 255
+9.5      -26        0 255 255 255 255
+9.5       26        0 255 255 255 255
+-9.5       26        0 255 255 255 255
+-9.5      -26        0 255 255 255 255
+9.5      -26        0 255 255 255 255
+9.5       26        0 255 255 255 255
+-9.5       26        0 255 255 255 255
+    Location: 104.5       41        0
+    WhichObjectBackground: 0
+    FirstDetentSnapback: 0
+    LastDetentSnapback: 0
+    EmitDetentValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: up
+      Location: 95       40        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 4
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+18        0        0 255 255 255 255
+18       27        0 255 255 255 255
+0       27        0 255 255 255 255
+      TexturePoints: 
+18        0        0
+0        0        0
+0       27        0
+18       27        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0 0.99999994
+0       -0 0.99999994
+0        0 0.99999994
+-0        0 0.99999994
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: up
+    }
+    ObjectClass: GLPolygon
+    {
+      Name: down
+      Location: 96       15        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 5
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+18        0        0 255 255 255 255
+18       29        0 255 255 255 255
+0       29        0 255 255 255 255
+      TexturePoints: 
+18        0        0
+0        0        0
+0       29        0
+18       29        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0       -0        1
+0        0        1
+-0        0        1
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: down
+    }
+
+    EndMarker: downSwitch
+  }
+  ObjectClass: GlsSwitch 1.1
+  {
+    Name: downSwitch_1
+    Visible: 1
+    Pickable: 1
+    Rotation: 0        0        0
+    DynamicTranslate: 0        0        0
+    DynamicScale: 1        1        1
+    DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+    TextureIndex: -1
+    Blink: 0
+    BlinkRate: 2
+    TexturePoints: 
+9.5      -26        0
+-9.5      -26        0
+-9.5       -7        0
+9.5       -7        0
+    PerformGroupCullCheck: 0
+    CullTestChildren: 1
+    Count: 3
+    Vertices: 8
+-9.5      -26        0 255 255 255 255
+9.5      -26        0 255 255 255 255
+9.5       26        0 255 255 255 255
+-9.5       26        0 255 255 255 255
+-9.5      -26        0 255 255 255 255
+9.5      -26        0 255 255 255 255
+9.5       26        0 255 255 255 255
+-9.5       26        0 255 255 255 255
+    Location: 297.5       41        0
+    WhichObjectBackground: 0
+    FirstDetentSnapback: 0
+    LastDetentSnapback: 0
+    EmitDetentValEvent: 1
+    EmitLimitEvent: 1
+    EmitReleaseEvent: 1
+    DetentVal: 1
+    RotationOrigin: 0        0 0
+    InitializationCode: 
+    ObjectCallbackCode: 
+    ProtectionMode: PROTECTED
+    Locked: 0
+    AlternateClassName: 
+    AlternateClassHeaderFile: (None)
+    LinkedAttributes: {}
+    GenerateMemberVariable: 1
+    UserDefinedAttributes: 
+    CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+        ObjectClass: GLPolygon
+    {
+      Name: up_1
+      Location: 288       40        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 4
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+18        0        0 255 255 255 255
+18       27        0 255 255 255 255
+0       27        0 255 255 255 255
+      TexturePoints: 
+18        0        0
+0        0        0
+0       27        0
+18       27        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0 0.99999994
+0       -0 0.99999994
+0        0 0.99999994
+-0        0 0.99999994
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: up_1
+    }
+    ObjectClass: GLPolygon
+    {
+      Name: neutral
+      Location: 288       35        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 6
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+19        0        0 255 255 255 255
+19       19        0 255 255 255 255
+0       19        0 255 255 255 255
+      TexturePoints: 
+19        0        0
+0        0        0
+0       19        0
+19       19        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0       -0        1
+0        0        1
+-0        0        1
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: neutral
+    }
+    ObjectClass: GLPolygon
+    {
+      Name: down_1
+      Location: 289       15        0
+      Visible: 1
+      Pickable: 1
+      Rotation: 0        0        0
+      DynamicTranslate: 0        0        0
+      DynamicScale: 1        1        1
+      DCSMatrix:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      LineWidth: 1
+      CullBackFace: 0
+      AlphaMode: ALPHA_MODE_256_LEVEL
+      AntiAlias: 0
+      DepthTest: 2
+      Color: 0 0 0 255
+      TextureIndex: 5
+      TextureRepeat: 0
+      TextureMap: TEXTURE_MAP_REPLACE
+      BlendColor: 255 255 255 255
+      TextureMinFilter: TEXTURE_FILTER_LINEAR
+      TextureMagFilter: TEXTURE_FILTER_LINEAR
+      PolygonMode: POLY_MODE_FILLED
+      PolygonEnd: POLY_CLOSED
+      PolygonOffset: 0
+      Shading: FLAT
+      LineStippleMultiplier: 1
+      LineStipplePattern: 65535
+      Blink: 0
+      BlinkRate: 2
+      LightingEnabled: 0
+      MaterialIndices: 1
+        0 
+      Vertices: 4
+0        0        0 255 255 255 255
+18        0        0 255 255 255 255
+18       29        0 255 255 255 255
+0       29        0 255 255 255 255
+      TexturePoints: 
+18        0        0
+0        0        0
+0       29        0
+18       29        0
+      TextureCoords: 4
+0        0        0
+1        0        0
+1        1        0
+0        1        0
+      Normals: 4
+0        0        1
+0       -0        1
+0        0        1
+-0        0        1
+      RotationOrigin: 0        0 0
+      InitializationCode: 
+      ObjectCallbackCode: 
+      ProtectionMode: PROTECTED
+      Locked: 0
+      AlternateClassName: 
+      AlternateClassHeaderFile: (None)
+      LinkedAttributes: {}
+      GenerateMemberVariable: 1
+      UserDefinedAttributes: 
+      CumulativeTransform:               1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 
+      EndMarker: down_1
+    }
+
+    EndMarker: downSwitch_1
+  }
+
+}
+
