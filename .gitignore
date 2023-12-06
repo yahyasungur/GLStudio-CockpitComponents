@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# GL Studio generated files
+*.gls
+*.gls.bak
+
+# Backup files
+*~
+
+# Other files
+.DS_Store
