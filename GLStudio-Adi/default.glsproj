@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glsProjManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+	<activationScripts>
+		<activate>
+			<path>./Engineering/ProjectSupport/ObjectCreateScripts/ProjectActivated.py</path>
+		</activate>
+		<deactivate>
+			<path>./Engineering/ProjectSupport/ObjectCreateScripts/ProjectDeactivated.py</path>
+		</deactivate>
+	</activationScripts>
+	<objectButtons>
+	</objectButtons>
+	<toolbarButtons>
+		<button>
+			<script>
+				<path>./Engineering/ProjectSupport/ObjectCreateScripts/RevealDirectory_Art.py</path>
+			</script>
+			<text>Art</text>
+			<iconPath>./Engineering/ProjectSupport/Icons/Stylized_Mona_Lisa.svg</iconPath>
+			<tooltip>Opens the Art Directory</tooltip>
+		</button>
+		<button>
+			<script>
+				<path>./Engineering/ProjectSupport/ObjectCreateScripts/UpdateEyePoint.py</path>
+			</script>
+			<iconPath>./Engineering/ProjectSupport/Icons/center_eye.svg</iconPath>
+			<tooltip>Centers and resizes the orthogonal view of the main eye point, creating one if it does not exist</tooltip>
+		</button>
+		<button>
+			<script>
+				<path>./Engineering/ProjectSupport/ObjectCreateScripts/RefreshCatalyzers.py</path>
+			</script>
+			<iconPath>./Engineering/ProjectSupport/Icons/catalyzer_refresh.svg</iconPath>
+			<tooltip>Refreshes all catalyzers in the current document.  Necessary until local referenced object changes are detectable</tooltip>
+		</button>
+	</toolbarButtons>
+	<deployments>
+	</deployments>
+	<requiredGLStudioVersion>
+		<minVersion compare="greaterThanOrEqual">6.0.1</minVersion>
+	</requiredGLStudioVersion>
+	<topLevelDesignFile>Layout/FrontPage.gls</topLevelDesignFile>
+</glsProjManifest>
